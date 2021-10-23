@@ -11,10 +11,17 @@ class HostelsHomepageSpotlight extends Component
         \Log::info( '-1 HostelsHomepageSpotlight ::' . print_r( -1, true  ) );
 
 //        $this->emitUp('setCurrentPageProperties', [
-        $this->emit('setCurrentPageProperties', [
-            'title'                 => 'Cal from HostelsHomepageSpotlight "',
-        ]);
+        // $this->emit('setCurrentPageProperties', [
+        //     'title'                 => 'Cal from HostelsHomepageSpotlight "',
+        // ]);
 
         return view('livewire.hostel.hostels-homepage-spotlight');
     }
+
+    public function emitHeaderToComponent()
+{
+    $this->emit('setCurrentPageProperties', [
+        'title' => 'Cal from ' . __CLASS__,
+    ]);
+}
 }
