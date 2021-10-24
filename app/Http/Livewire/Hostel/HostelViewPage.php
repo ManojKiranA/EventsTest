@@ -10,9 +10,16 @@ class HostelViewPage extends Component
     {
         \Log::info( '-1 HostelViewPage ::' . print_r( -1, true  ) );
 //        $this->emitUp('setCurrentPageProperties', [
-        $this->emit('setCurrentPageProperties', [
-            'title'                 => 'Cal from HostelViewPage "',
-        ]);
+        // $this->emit('setCurrentPageProperties', [
+        //     'title'                 => 'Cal from HostelViewPage "',
+        // ]);
         return view('livewire.hostel.hostel-view-page');
+    }
+
+    public function emitHeaderToComponent()
+    {
+        $this->emit('setCurrentPageProperties', [
+            'title' => 'Cal from ' . __CLASS__,
+        ]);
     }
 }

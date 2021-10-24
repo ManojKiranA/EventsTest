@@ -17,7 +17,7 @@ class AppHeader extends Component
 
     public function setCurrentPagePropertiesCallback($data)
     {
-        \Log::info(varDump($data, 'INSIDE  -1  setCurrentPagePropertiesCallback $data::'));
+        // \Log::info(varDump($data, 'INSIDE  -1  setCurrentPagePropertiesCallback $data::'));
         if ( ! empty($data['title'])) {
             $this->title = $data['title'];
         }
